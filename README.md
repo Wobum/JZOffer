@@ -1,2 +1,2 @@
 # JZOffer
-剑指 Offer Java 版
+剑指 Offer 第二版 Java
