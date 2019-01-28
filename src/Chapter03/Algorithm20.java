@@ -31,6 +31,7 @@ public class Algorithm20 {
             // 扫描 C 部分
             flag = scanInteger(string) && flag;
         }
+        // 判断是否扫描完整个字符串
         return index >= string.length() && flag;
     }
 
