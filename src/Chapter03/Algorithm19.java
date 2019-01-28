@@ -93,7 +93,13 @@ public class Algorithm19 {
     public static void main(String[] args) {
         String a = "aaa";
         String b = "aaa*a*a*a*a";
+        String c = "";
+        String d = null;
         System.out.println(match(a, b));
+        System.out.println(match(c, c));
+        System.out.println(match(c, d));
+        System.out.println(match(d, d));
+        System.out.println(match(d, c));
         System.out.println(match1(a, b));
     }
 }
