@@ -27,20 +27,16 @@ public class Algorithm25 {
         }
 
         Node res = new Node();
-        Node tmp = res;
+        Node help = res;
         Node p1 = head1;
         Node p2 = head2;
         while (p1 != null && p2 != null) {
             if (p1.value <= p2.value) {
-                Node node = new Node();
-                node.value = p1.value;
-                res.next = node;
+                res.next = p1;
                 res = res.next;
                 p1 = p1.next;
             } else {
-                Node node = new Node();
-                node.value = p2.value;
-                res.next = node;
+                res.next = p2;
                 res = res.next;
                 p2 = p2.next;
             }
@@ -58,7 +54,7 @@ public class Algorithm25 {
             p2 = p2.next;
         }
 
-        return tmp.next;
+        return help.next;
     }
 
     public static void printNodeList(Node head) {
@@ -101,6 +97,6 @@ public class Algorithm25 {
         printNodeList(nodes1[0]);
         printNodeList(nodes2[0]);
 
-        printNodeList(mergeSortedNodelist(nodes1[0], null));
+        printNodeList(mergeSortedNodelist(nodes1[0], nodes2[0]));
     }
 }
